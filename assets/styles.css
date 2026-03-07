@@ -401,6 +401,17 @@ section {
   color: #daf6ef;
 }
 
+.register-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.register-actions .btn {
+  white-space: nowrap;
+}
+
 footer {
   padding: 2.5rem 0 3rem;
   color: var(--muted);
@@ -455,6 +466,11 @@ footer {
   .register {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .register-actions {
+    justify-content: flex-start;
+    width: 100%;
   }
 }
 
