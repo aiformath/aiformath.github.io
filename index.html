@@ -15,12 +15,11 @@
     <div class="container topbar-inner">
       <a class="brand" href="#">
         <span class="brand-mark">ODU</span>
-        <span>AI Seminar</span>
+        <span>AI for Math Seminar</span>
       </a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#schedule">Schedule</a>
-        <a href="#speakers">Speakers</a>
         <a href="#join">Join</a>
       </nav>
     </div>
@@ -30,15 +29,15 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Spring 2026</span>
+          <!-- <span class="eyebrow">Spring 2026</span> -->
           <h1>AI for Research, Teaching, and Fun</h1>
           <p class="lede">
             A weekly informal chat on AI related topics, from theory to practice. Open to all ODU students, faculty, and staff.
           </p>
-          <div class="cta-row">
+          <!-- <div class="cta-row">
             <a class="btn btn-primary" href="#join">Register for Updates</a>
             <a class="btn btn-secondary" href="#schedule">See Upcoming Talks</a>
-          </div>
+          </div> -->
         </div>
 
         <aside class="hero-card" aria-label="Upcoming events">
@@ -51,7 +50,7 @@
     <section id="about" class="container reveal">
       <h2 class="section-title">What We Do</h2>
       <p class="section-subtitle">
-        The seminar provides an informal space for ODU's AI community to share ideas, learn about new developments, and foster collaborations across disciplines. </p>
+        An informal space for ODU's AI community to share ideas, learn about new developments, and foster collaborations across disciplines. </p>
       <div class="cards">
         <article class="card">
           <h3>Research Talks</h3>
@@ -69,30 +68,31 @@
     </section>
 
     <section id="schedule" class="container reveal">
-      <h2 class="section-title">Schedule</h2>
+      <div class="schedule-header-row">
+        <h2 class="section-title">Schedule</h2>
+        <div class="schedule-controls">
+          <!-- <label for="schedule-semester-select">Semester</label> -->
+          <select id="schedule-semester-select" aria-label="Select semester"></select>
+        </div>
+      </div>
       <p class="section-subtitle">Weekly Wednesdays, 4:00-5:15 PM. Slides posted after each session.</p>
       <div id="schedule-cards" class="schedule">
       </div>
     </section>
 
-    <section id="speakers" class="container reveal">
-      <h2 class="section-title">Featured Speakers</h2>
-      <p class="section-subtitle">Invited guests from academia and industry.</p>
-      <div id="featured-speakers" class="cards">
-      </div>
-
+    <section id="join" class="container reveal">
       <div id="join" class="register">
         <div>
-          <h3>Join the Seminar Mailing List</h3>
+          <h3>Join the AI4Math Seminar Mailing List</h3>
           <p>Get weekly announcements, speaker abstracts, and slide links.</p>
         </div>
-        <a class="btn btn-secondary" href="mailto:seminar@example.edu?subject=AI%20Seminar%20Signup">Email to Subscribe</a>
+        <a class="btn btn-secondary" href="https://forms.gle/qESDfWU2roo87Bxu7" target="_blank" rel="noopener noreferrer">Subscribe</a>
       </div>
     </section>
   </main>
 
   <footer class="container">
-    <p>AI Seminar • Department of Math and Stat • ODU • Updated March 2026</p>
+    <p>AI4Math Seminar • Department of Math and Stat • ODU • Updated March 2026</p>
   </footer>
 
   <script src="assets/talks.js" defer></script>
