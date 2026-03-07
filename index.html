@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Seminar</title>
+  <meta name="description" content="Weekly AI Seminar: talks, workshops, and collaborations across artificial intelligence and related fields.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark">ODU</span>
+        <span>AI Seminar</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Spring 2026</span>
+          <h1>AI for Research, Teaching, and Fun</h1>
+          <p class="lede">
+            A weekly informal chat on AI related topics, from theory to practice. Open to all ODU students, faculty, and staff.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#join">Register for Updates</a>
+            <a class="btn btn-secondary" href="#schedule">See Upcoming Talks</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Upcoming events">
+          <h2>Next on the calendar</h2>
+          <div id="upcoming-events"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="container reveal">
+      <h2 class="section-title">What We Do</h2>
+      <p class="section-subtitle">
+        The seminar provides an informal space for ODU's AI community to share ideas, learn about new developments, and foster collaborations across disciplines. </p>
+      <div class="cards">
+        <article class="card">
+          <h3>Research Talks</h3>
+          <p>Frontier methods in AI.</p>
+        </article>
+        <article class="card">
+          <h3>Tools Exploration</h3>
+          <p>Discover and evaluate new AI tools and frameworks.</p>
+        </article>
+        <article class="card">
+          <h3>News Sharing</h3>
+          <p>Updates on the latest developments in AI and related fields.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="schedule" class="container reveal">
+      <h2 class="section-title">Schedule</h2>
+      <p class="section-subtitle">Weekly Wednesdays, 4:00-5:15 PM. Slides posted after each session.</p>
+      <div id="schedule-cards" class="schedule">
+      </div>
+    </section>
+
+    <section id="speakers" class="container reveal">
+      <h2 class="section-title">Featured Speakers</h2>
+      <p class="section-subtitle">Invited guests from academia and industry.</p>
+      <div id="featured-speakers" class="cards">
+      </div>
+
+      <div id="join" class="register">
+        <div>
+          <h3>Join the Seminar Mailing List</h3>
+          <p>Get weekly announcements, speaker abstracts, and slide links.</p>
+        </div>
+        <a class="btn btn-secondary" href="mailto:seminar@example.edu?subject=AI%20Seminar%20Signup">Email to Subscribe</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>AI Seminar • Department of Math and Stat • ODU • Updated March 2026</p>
+  </footer>
+
+  <script src="assets/talks.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
