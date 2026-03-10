@@ -276,7 +276,9 @@
       const dateLabel = shortDate(talk.date);
       const format = escapeHtml(talk.format || "Talk");
       const title = escapeHtml(talk.title || "Untitled talk");
-      const summary = escapeHtml(talk.summary || "Details coming soon.");
+      const abstract = escapeHtml(
+        talk.abstract || talk.summary || "Details coming soon.",
+      );
       const speaker = escapeHtml(talk.speaker || "TBA");
       const time = escapeHtml(talk.time || "TBD");
       const location = escapeHtml(talk.location || "TBD");
@@ -297,7 +299,7 @@
         '    <div class="schedule-item-content">',
         `      <p class=\"meta-label\">${format}</p>`,
         `      <p><strong>Time:</strong> ${time} <strong>Location:</strong> ${location}</p>`,
-        `      <p>${summary}</p>`,
+        `      <p>${abstract}</p>`,
         slidesHtml,
         "    </div>",
         "  </details>",
@@ -306,53 +308,6 @@
     });
 
     container.innerHTML = `<ul class="schedule-list">${items.join("\n")}</ul>`;
-  }
-
-  function renderFeaturedSpeakers(talks) {
-    const container = document.querySelector("#featured-speakers");
-    if (!container) {
-      return;
-    }
-
-    const speakersByName = new Map();
-    talks.forEach((talk) => {
-      if (!talk.featuredSpeaker || !talk.speaker) {
-        return;
-      }
-      if (!speakersByName.has(talk.speaker)) {
-        speakersByName.set(talk.speaker, {
-          name: talk.speaker,
-          affiliation: talk.affiliation || "",
-          bio: talk.bio || "",
-        });
-      }
-    });
-
-    const speakers = Array.from(speakersByName.values()).slice(0, 3);
-
-    if (speakers.length === 0) {
-      container.innerHTML =
-        '<p class="empty-state">Featured speakers will be posted soon.</p>';
-      return;
-    }
-
-    const cards = speakers.map((speaker) => {
-      const name = escapeHtml(speaker.name);
-      const affiliation = escapeHtml(
-        speaker.affiliation || "Affiliation coming soon.",
-      );
-      const bio = escapeHtml(speaker.bio || "Bio coming soon.");
-
-      return [
-        '<article class="card speaker">',
-        `  <h3>${name}</h3>`,
-        `  <small>${affiliation}</small>`,
-        `  <p>${bio}</p>`,
-        "</article>",
-      ].join("\n");
-    });
-
-    container.innerHTML = cards.join("\n");
   }
 
   function activateRevealAnimation() {
@@ -405,7 +360,6 @@
     renderScheduleCards(
       mostRecentSemesterGroup ? mostRecentSemesterGroup.talks : [],
     );
-    renderFeaturedSpeakers(allTalks);
     activateRevealAnimation();
   }
 
