@@ -3,7 +3,7 @@
 window.SEMINAR_TALKS = [
   {
     semester: "Spring 2026",
-    date: "2026-03-26",
+    date: "2026-03-24",
     title: "Tools Introduction: VS Code",
     speaker: "Guohui Song",
     affiliation: "ODU",
