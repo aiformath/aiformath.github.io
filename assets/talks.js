@@ -4,7 +4,7 @@ window.SEMINAR_TALKS = [
   {
     semester: "Spring 2026",
     date: "2026-03-24",
-    title: "Tools Introduction: VS Code",
+    title: "AI-Assisted Mathematics with VS Code",
     speaker: "Guohui Song",
     affiliation: "ODU",
     bio: "",
@@ -12,7 +12,7 @@ window.SEMINAR_TALKS = [
     location: "ECSB 2120",
     format: "Talk + Discussion",
     abstract:
-      "We will introduce how to use Visual Studio Code (VS Code) in math writing (LaTeX), programming (Python), and LLM-assisted work.",
+      "In this talk, we will explore how to use AI assistants in Visual Studio Code (VS Code) to enhance the experience of learning, teaching, and researching mathematics. We will cover practical tips and techniques for leveraging AI tools to streamline the process of writing LaTeX, creating figures, preparing lecture notes, and translating research ideas into code. We will also discuss the strengths and limitations of AI assistants in the context of mathematics and provide best practices for using them effectively.",
     slides: "",
   },
 ];
